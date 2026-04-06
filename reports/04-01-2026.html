@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA Evaluation Report - 04/01/2026</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="hero">
+        <div class="horizontal-container">
+          <h1>QA Evaluation Report - </h1>
+          <h1>04/01/2026</h1>
+        </div>
+        <p class="sub">Strict evaluation of chatbot responses across relevance, precision, and faithfulness. Click any ID to open the full testcase details for that row.</p>
+        <p class="sub" style="margin-top:8px;">Analyzed and reported using OpenAI Codex (model: gpt-5.4-mini).</p>
+      </div>
+      <div class="summary">
+        <div class="metric"><div class="label">Average Relevance</div><div class="value">0.80</div></div>
+        <div class="metric"><div class="label">Average Precision</div><div class="value">0.30</div></div>
+        <div class="metric"><div class="label">Average Faithfulness</div><div class="value">0.25</div></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Relevance</th><th>Precision</th><th>Faithfulness</th><th>Brief Reasoning</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;1&quot;, &quot;test_subject&quot;: &quot;Project/Workstream Pain Points&quot;, &quot;relevance_score&quot;: 0.75, &quot;precision_score&quot;: 0.25, &quot;faithfulness_score&quot;: 0.0, &quot;reasoning&quot;: &quot;The response stays focused on Avanti integration pain points, so it addresses the core request. However, it misses the expected API-credential delay, 35 unbudgeted troubleshooting hours, 10-digit versus 9-digit grid code issue, and earning-code mapping problem. Instead it adds unsupported claims about daily field-ticket approvals, pause functions, negative durations, and six-hour employee sync behavior.&quot;, &quot;input&quot;: &quot;What are the main pain points regarding the Avanti integration for the Mikisew project?&quot;, &quot;expected_output&quot;: &quot;The Avanti integration for Mikisew has faced multiple significant pain points throughout the project.\r\nKey Pain Points:\r\nAPI Access and Credentials: In November 2025, the team experienced severe delays because API access was pending and credentials were tied to a former employee&#x27;s email with 2FA, completely blocking development (Meeting Summary, Nov 14-19, 2025).\r\nOut-of-Scope Troubleshooting: By February 25, 2026, Michael Martin&#x27;s SOW analysis revealed that approximately 35 unbudgeted hours were spent troubleshooting Avanti API permissions and access, which was supposed to be the client&#x27;s responsibility (Email from Michael Martin, Feb 25, 2026).\r\nGrid Code Discrepancies: A major technical roadblock emerged regarding the format of employee grid codes. Avanti used a 10-digit format, while the legacy SAP system and field workers were accustomed to a 9-digit format. The team had to refactor scripts to handle this discrepancy (Meeting Summary, March 4, 2026).\r\nEarning Codes Mapping: In late March, Nikko Molina noted that earning codes required for reporting in Avanti had no direct equivalent mapped in NetSuite, requiring further solutioning (Meeting Transcript, March 27, 2026).\r\nIn conclusion, the Avanti integration suffered from initial access delays, unbudgeted troubleshooting, and complex data mapping discrepancies regarding grid codes and earning codes. &quot;, &quot;actual_output&quot;: &quot;Here are the main pain points regarding the Avanti integration for the Mikisew project, identified from recent meeting transcripts:\n\n### 1. Persistent Connection Issues\n*   There are recurring \&quot;Avanti connection issue\&quot; and \&quot;issue connecting to Avanti\&quot; problems, which have been a significant blocker for testing and progress (e.g., February 17, 2026; February 19, 2026; February 20, 2026).\n*   A specific connection issue was noted where access was set up in the Avanti sandbox, but changes and refreshes were causing problems (February 19, 2026).\n\n### 2. Field Ticket Approval Process Inefficiencies\n*   A major concern is the inability to approve field tickets daily due to the current process requiring a report to be run on Monday mornings before sending data to Avanti. This creates a bottleneck as there are too many field tickets for a single day&#x27;s approval (January 15, 2026).\n*   There&#x27;s a clear need for a \&quot;pause function\&quot; between approving field tickets and sending them to Avanti to allow for labor report analysis.\n*   Approved timesheets need to be explicitly sent to Avanti via a button, and if the \&quot;send to Avanti\&quot; status is \&quot;no,\&quot; it indicates a potential manual step or delay in data transfer (February 17, 2026).\n\n### 3. Challenges with Time Entry and Data Handling\n*   Questions have been raised about how to handle \&quot;negative duration changes\&quot; in time entries and whether Avanti can accept such entries (January 13, 2026). This suggests potential data integrity or processing issues.\n\n### 4. Employee Record Syncing and Data Discrepancies\n*   Employee records from Avanti are synced to NetSuite as \&quot;placeholder records\&quot; via custom records, not as official NetSuite records (January 06, 2026).\n*   There are instances where new employees created in Avanti are not immediately reflected in NetSuite, or changes in Avanti employee information are not updated promptly. A script is in place to update this every 6 hours, but issues with the script running or being released have been noted (February 17, 2026; February 10, 2026).\n*   Confusion existed regarding the unique identifiers for employees, with a decision to use employee numbers instead of email addresses (January 13, 2026).\n*   Ensuring that \&quot;active position codes\&quot; from Avanti are correctly present and mapped on employee profiles in NetSuite is an ongoing task (March 27, 2026).\n\n### 5. Delays in Testing and User Acceptance Testing (UAT)\n*   The aforementioned connection and integration issues are directly impacting the ability to conduct thorough testing and UAT, leading to delays in finalizing and deploying functionalities (February 23, 2026; March 03, 2026; March 27, 2026).\n\nWhile not directly an Avanti integration pain point, the complexity and maintenance challenges of general approval workflows (POs, expenses) were also discussed, which could indirectly affect any integration points with Avanti for payroll or related processes (January 16, 2026).&quot;, &quot;tools_called&quot;: &quot;[&#x27;search_transcripts&#x27;]&quot;}">1</button></td>
+              <td class="score good">0.75</td>
+              <td class="score bad">0.25</td>
+              <td class="score very-bad">0.00</td>
+              <td>The response stays focused on Avanti integration pain points, so it addresses the core request. However, it misses the expected API-credential delay, 35 unbudgeted troubleshooting hours, 10-digit versus 9-digit grid code issue, and earning-code mapping problem. Instead it adds unsupported claims about daily field-ticket approvals, pause functions, negative durations, and six-hour employee sync behavior.</td>
+            </tr>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;2&quot;, &quot;test_subject&quot;: &quot;Current Status Summary (Exec-ready)&quot;, &quot;relevance_score&quot;: 0.75, &quot;precision_score&quot;: 0.5, &quot;faithfulness_score&quot;: 0.25, &quot;reasoning&quot;: &quot;The answer is an executive status summary for the Mikisew project and includes the expected move from April 1, 2026 to May 1, 2026. But it omits the core red-status framing, the 2,378.25 of 2,776 hours consumed, the 997-hour change order, and the four parallel teams emphasized in the expected output. It also introduces unsupported details such as a hybrid open-items tracker, a pending CDMS report, and a Fort Petroleum secure-connection decision.&quot;, &quot;input&quot;: &quot;Provide an executive summary of the Mikisew project status as of mid-March 2026.&quot;, &quot;expected_output&quot;: &quot;As of mid-March 2026, the Mikisew NetSuite implementation project is in a critical &#x27;red&#x27; status, facing significant budget, scope, and timeline challenges.\r\nProject Status Overview:\r\nTimeline Delay: The original go-live date of April 1, 2026, has been pushed to May 1, 2026, with full go-live potentially extending into June. Parallel testing has been shifted to accommodate this delay (Meeting Summary, March 17, 2026).\r\nBudget Overrun: The project has consumed a vast majority of its allocated hours. By late February, 2,378.25 of the 2,776 estimated hours (85%) were consumed, prompting NDI to prepare a change order requesting an additional 997 hours to complete the project (Email from Chris Kim, March 3, 2026).\r\nScope Creep: Unanticipated complexity in several areas, notably PO approval workflows (expanding from 3 to 17+), Field Ticketing (86.75 hours over cap), and Wiz-Tec integration, have heavily taxed resources (Scope to Actuals Analysis, Feb 25, 2026).\r\nStrategic Pivot: To accelerate configuration completion, NDI transitioned from a single-threaded execution model to parallel execution, organizing into 4 dedicated teams (Order to Cash, Field Operations, Procure to Pay, etc.) to triple productivity and meet the revised deadlines (Meeting Summary, March 17, 2026).\r\nIn summary, the project requires strict scope management, client sign-off on the 997-hour change order, and rapid execution via parallel workstreams to achieve the revised May 2026 go-live date. &quot;, &quot;actual_output&quot;: &quot;## Mikisew Project Status: Executive Summary (Mid-March 2026)\n\nAs of mid-March 2026, the Mikisew project is in an active and critical phase, primarily focused on **NetSuite ERP implementation, comprehensive testing, and data migration**. Significant progress is being made in several key areas, though the project is experiencing some schedule adjustments and ongoing challenges.\n\n### Key Progress and Activities:\n\n*   **Detailed Planning &amp; Tracking:** A hybrid project plan and open items list is under development to provide granular detail and improve progress tracking.\n*   **Core Module Development:** Progress has been observed in the \&quot;Order to Cash,\&quot; \&quot;Procure to Pay\&quot; (with a focus on finalizing approval workflows), and \&quot;Tool &amp; Fleet Maintenance\&quot; streams. Solution and technical design documents for Tool/Fleet Maintenance were distributed in March.\n*   **Extensive Testing &amp; Data Migration:** The project is heavily engaged in end-to-end testing, with numerous sign-offs targeted for completion by the end of March and early April. Data migration for OpenAR, OpenAP, and master data is actively ongoing.\n*   **Resource Mobilization:** Additional resources have been assigned to help close out open items, aiming to distribute the workload more effectively.\n\n### Challenges and Open Items:\n\n*   **Schedule Delays:** The project schedule is noted as \&quot;lagging\&quot; towards the end of March, prompting discussions. The parallel go-live start date has reportedly shifted from April 1st to **May 1st, 2026**.\n*   **Impact of Changes:** \&quot;Massive changes\&quot; were anticipated in the weeks leading up to mid-March, with a recognized need for consistent communication and validation to manage potential ripple effects across interconnected systems.\n*   **Pending Approvals &amp; Resources:**\n    *   Approval for additional hours, necessitated by a revised testing approach, is still pending.\n    *   A dedicated resource for the fixed asset side of the project is yet to be assigned.\n*   **Outstanding Deliverables:**\n    *   A CDMS report has been pending without significant movement.\n    *   A final decision is required regarding the path forward for the Fort Petroleum (FTP) secure connection.\n*   **Communication &amp; Visibility:** There&#x27;s an ongoing emphasis on improving visibility into team PTO and travel schedules for better planning, and ensuring clear communication regarding system updates to avoid surprises.\n\n### Overall Sentiment:\n\nWhile the project team is actively engaged in addressing outstanding items and making progress on core functionalities, the shift in the go-live timeline and the need for pending approvals highlight areas requiring close monitoring and resolution as the project moves into April. Regular steering committee meetings and daily stand-ups are crucial for coordinating efforts and managing the identified challenges.&quot;, &quot;tools_called&quot;: &quot;[&#x27;analyze_cross_channel_correlation&#x27;, &#x27;get_pending_action_items&#x27;, &#x27;get_pain_points_and_challenges&#x27;, &#x27;search_transcripts&#x27;, &#x27;search_content&#x27;, &#x27;get_deadlines&#x27;]&quot;}">2</button></td>
+              <td class="score good">0.75</td>
+              <td class="score good">0.50</td>
+              <td class="score bad">0.25</td>
+              <td>The answer is an executive status summary for the Mikisew project and includes the expected move from April 1, 2026 to May 1, 2026. But it omits the core red-status framing, the 2,378.25 of 2,776 hours consumed, the 997-hour change order, and the four parallel teams emphasized in the expected output. It also introduces unsupported details such as a hybrid open-items tracker, a pending CDMS report, and a Fort Petroleum secure-connection decision.</td>
+            </tr>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;3&quot;, &quot;test_subject&quot;: &quot;Commitment Tracker (Single Source of Truth)&quot;, &quot;relevance_score&quot;: 1.0, &quot;precision_score&quot;: 0.25, &quot;faithfulness_score&quot;: 0.25, &quot;reasoning&quot;: &quot;The response directly addresses Solver integration deliverables. Precision is poor because the expected commitment was limited to NetSuite data feeds and explicitly excluded building Solver reports, while the actual answer claims report-development and broader configuration commitments. It has a small overlap with the expected saved-search/feed concept, but most listed commitments are unsupported by the expected output.&quot;, &quot;input&quot;: &quot;Based on the Mikisew project communications, what commitments were made regarding the Solver reporting integration deliverables?&quot;, &quot;expected_output&quot;: &quot;The commitment regarding the Solver integration was strictly limited to establishing data feeds from NetSuite, not building out the reports within Solver itself.\r\nCommitment Details:\r\nScope Limitation: The Statement of Work (SOW) allocated 96 hours for the Solver integration, specifically to build 3-5 saved searches in NetSuite to feed data into Solver (Meeting Summary, Dec 11-13, 2025).\r\nClient Expectation vs. Reality: The Mikisew team, including Lisa and Bilal, requested that NDI build complex financial reports from scratch directly within the Solver application.\r\nNDI Decision: NDI leadership explicitly declared that building reports within Solver was out of scope. Monica Rousselle was instructed to decline additional report-building requests and refer the client to Mike Martin regarding the scope boundary (Meeting Summary, March 13, 2026).\r\nIn conclusion, NDI&#x27;s commitment was limited to providing NetSuite saved searches to supply data to Solver, explicitly excluding the creation of actual financial reports inside the third-party Solver platform. &quot;, &quot;actual_output&quot;: &quot;Based on Mikisew project communications, the following commitments were made regarding the Solver reporting integration deliverables:\n\n### Solver Reporting Integration Deliverables\n\n**1. Integration Setup and Access:**\n*   **Establish NetSuite-Solver Connection:** A primary commitment was to set up and test the integration between NetSuite and Solver. (Meetings: 2025-11-14, 2025-11-12)\n*   **Enable Suite Bundle:** The NetSuite integration Suite bundle needed to be enabled, as mapping and testing were identified as time-critical components. (Email: 2025-11-13)\n*   **Solver Tenant Access:** Access to the new Solver tenant was established. (Meeting: 2025-11-12)\n*   **Troubleshoot Connection Issues:** Efforts were made to troubleshoot invalid login attempts and permission issues preventing NetSuite from feeding data to Solver. (Transcripts: 2026-01-07, Email: 2026-03-12)\n\n**2. Data Mapping and Configuration:**\n*   **General Data Mapping:** Commitment to map data from NetSuite to Solver, including account dimensions and transaction details, to configure data sources for financial reporting. (Emails: 2025-11-14, 2025-11-18)\n*   **Account Dimension Mapping:** Account dimension mapping was successfully configured and tested. (Email: 2025-11-14)\n*   **Chart of Accounts (GL) Mapping:** The GL number in NetSuite was identified as the external ID for uploading to Solver. Nicholas committed to finishing GL details and getting the data into Solver. Monica also committed to setting up 2025 data in Solver and mapping fields. (Transcripts: 2026-01-07, 2026-02-10)\n*   **Accounts Receivable Data Structure:** Discussions covered the structure and organization of accounts receivable data in Solver, including hierarchy, naming conventions, and reporting requirements in NetSuite. (Email: 2025-11-16)\n*   **\&quot;Joint Venture\&quot; Data:** Nicholas committed to incorporating \&quot;joint venture\&quot; data into transactions for client reporting as requested by Lisa. (Transcript: 2026-01-07)\n*   **Safe Searches:** It was noted that if three separate safe searches are required for Solver data feeds, then three safe searches would need to be created in NetSuite. (Transcript: 2026-01-07)\n\n**3. Financial Report Development:**\n*   Commitment to the development of Solver reports and syncing financial data between NetSuite and Solver. (Email: 2025-11-18)\n*   Discussions included addressing concerns about trial balances and Solver integration. (Email: 2025-11-19)&quot;, &quot;tools_called&quot;: &quot;[&#x27;search_transcripts&#x27;, &#x27;search_content&#x27;]&quot;}">3</button></td>
+              <td class="score good">1.00</td>
+              <td class="score bad">0.25</td>
+              <td class="score bad">0.25</td>
+              <td>The response directly addresses Solver integration deliverables. Precision is poor because the expected commitment was limited to NetSuite data feeds and explicitly excluded building Solver reports, while the actual answer claims report-development and broader configuration commitments. It has a small overlap with the expected saved-search/feed concept, but most listed commitments are unsupported by the expected output.</td>
+            </tr>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;4&quot;, &quot;test_subject&quot;: &quot;Contradiction Finder&quot;, &quot;relevance_score&quot;: 0.5, &quot;precision_score&quot;: 0.0, &quot;faithfulness_score&quot;: 0.25, &quot;reasoning&quot;: &quot;The response stays on the requested topic of go-live-date contradictions, but it does not provide the direct answer and instead says none were found. That is fully inconsistent with the expected April 1, 2026 versus May/June 2026 contradiction and the internal feasibility doubts documented in March 2026. It avoids adding many extra facts, yet its claims that no explicit go-live mentions or contradictions exist are not supported by the expected output.&quot;, &quot;input&quot;: &quot;Are there any contradictions in the Mikisew documents regarding the expected go-live date?&quot;, &quot;expected_output&quot;: &quot;Yes, there are clear contradictions and shifts regarding the Mikisew project&#x27;s expected go-live date throughout the documents.\r\nTimeline Contradictions:\r\nInitial Target: Early project planning and December 2025 meetings consistently reference a firm go-live date of April 1, 2026, aligned with the start of their new fiscal year (Meeting Summaries, Nov-Dec 2025).\r\nFeasibility Doubts: By early March 2026, internal NDI team consensus rated the chances of hitting the April 1st date at only 20-65%, creating a contradiction between the official client-facing date and internal reality (Meeting Summary, March 9, 2026).\r\nRevised Target: On March 17, 2026, the project timeline was officially recorded as shifting the parallel start date from April 1st to May 1st, pushing the full go-live to June (Meeting Summary, March 17, 2026).\r\nExtension Document: However, internal transcripts mention an extension was signed until May 31st to demonstrate improved process throughput (Meeting Transcript, March 17, 2026).\r\nIn conclusion, the documents show a contradiction between the originally contracted April 1, 2026 go-live date, the internal realization that it was impossible, and the subsequent official push to May/June 2026. &quot;, &quot;actual_output&quot;: &quot;I could not find any explicit mentions of the \&quot;go-live date\&quot; for Mikisew in the searched emails or meeting transcripts, nor any contradictions regarding it. The documents primarily discuss project meetings, internal updates, and solution designs, without detailing specific go-live timelines.&quot;, &quot;tools_called&quot;: &quot;[&#x27;search_content&#x27;, &#x27;search_transcripts&#x27;]&quot;}">4</button></td>
+              <td class="score good">0.50</td>
+              <td class="score very-bad">0.00</td>
+              <td class="score bad">0.25</td>
+              <td>The response stays on the requested topic of go-live-date contradictions, but it does not provide the direct answer and instead says none were found. That is fully inconsistent with the expected April 1, 2026 versus May/June 2026 contradiction and the internal feasibility doubts documented in March 2026. It avoids adding many extra facts, yet its claims that no explicit go-live mentions or contradictions exist are not supported by the expected output.</td>
+            </tr>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;5&quot;, &quot;test_subject&quot;: &quot;Scope Creep Detector&quot;, &quot;relevance_score&quot;: 1.0, &quot;precision_score&quot;: 0.5, &quot;faithfulness_score&quot;: 0.5, &quot;reasoning&quot;: &quot;The answer directly names areas of Mikisew scope creep and correctly overlaps with approval-workflow expansion and role complexity. It misses other expected areas like Field Ticketing, Wiz-Tec, custom-role hour overruns, and client-responsibility data cleansing, so it is only partially accurate. Several added areas such as testing approach, Tool and Fleet Maintenance customization, and expense workflow approval are unsupported by the expected output.&quot;, &quot;input&quot;: &quot;What specific areas of the Mikisew project have been identified as experiencing scope creep?&quot;, &quot;expected_output&quot;: &quot;Multiple areas of the Mikisew implementation have been explicitly identified as suffering from scope creep.\r\nIdentified Scope Creep Areas:\r\nApproval Workflows: The SOW originally planned for 3 standard workflows (one per operating company). During UAT, the client requested up to 17 highly customized workflows per subsidiary, including complex proxy/delegation requirements that were never scoped (Meeting Summary, Feb 5, 2026; SOW vs Actuals Analysis, Feb 25, 2026).\r\nField Ticketing: The SOW capped Field Ticketing scripting and design at 200 hours. Actuals showed ~286.75 hours billed due to continuous functional reviews and customization design drift (SOW vs Actuals Analysis, Feb 25, 2026).\r\nWiz-Tec Integration: Scoped as a simple one-way integration using NetSuite&#x27;s native SFTP connector. It ballooned into bi-directional complex integration logic requiring custom Python scripting and SSH PEM file encryption handling (SOW vs Actuals Analysis, Feb 25, 2026).\r\nCustom Roles: The SOW allowed 15 hours to configure up to 10 custom roles. By late February, the team had logged ~47.5 hours configuring far more than 10 roles (SOW vs Actuals Analysis, Feb 25, 2026).\r\nData Cleansing: NDI spent over 20 hours doing data cleansing and mapping, which was explicitly stated in the SOW as the client&#x27;s responsibility (SOW vs Actuals Analysis, Feb 25, 2026).\r\nIn conclusion, scope creep heavily impacted approval workflows, field ticketing, the Wiz-Tec integration, user roles, and data migration responsibilities.&quot;, &quot;actual_output&quot;: &quot;The Mikisew project has experienced scope creep in several key areas:\n\n*   **Purchase Order (PO) Approval Workflow:**\n    *   The workflow became significantly more complex than initially scoped, with discussions indicating it took over 50 hours and involved 17 different workflows rather than a single workflow with sub-elements per operating company.\n    *   Additional features like a \&quot;delegation piece\&quot; or \&quot;proxy piece\&quot; and \&quot;approvals by department\&quot; were added, which were not part of the original plan.\n    *   The design expanded due to an interpretation requiring a different approval chain for every user or approver.\n\n*   **Roles and Permissions:**\n    *   Extensive discussions and numerous sessions were required to clarify roles and permissions, stemming from initial presentations.\n    *   Concerns were raised about the long-term maintenance implications of user-based workflows, potentially leading to a \&quot;maintenance nightmare\&quot; due to frequent updates.\n    *   The client continuously added \&quot;more and more details, and more and more requirements\&quot; related to approvals and roles.\n\n*   **General Client Requests and \&quot;Nice-to-Haves\&quot;:**\n    *   There&#x27;s a tendency for the client to request additional features or changes that are not essential, often described as \&quot;it&#x27;d be nice if we could do this, and we could do that.\&quot;\n    *   The team has noted the client&#x27;s inclination to \&quot;take advantage\&quot; and \&quot;keep coming back\&quot; with requests if given leeway.\n\n*   **Testing Approach:**\n    *   A revised approach to testing the project required additional hours that were not part of the initial planning, necessitating further approval.\n\n*   **Customization for Tool and Fleet Maintenance Administration Design Document:**\n    *   This area was identified as requiring \&quot;a lot of extra custom\&quot; work.\n\n*   **Expense Workflow Approval:**\n    *   This workflow was customized and was not included in the original Statement of Work (SOW).&quot;, &quot;tools_called&quot;: &quot;[&#x27;search_transcripts&#x27;]&quot;}">5</button></td>
+              <td class="score good">1.00</td>
+              <td class="score good">0.50</td>
+              <td class="score good">0.50</td>
+              <td>The answer directly names areas of Mikisew scope creep and correctly overlaps with approval-workflow expansion and role complexity. It misses other expected areas like Field Ticketing, Wiz-Tec, custom-role hour overruns, and client-responsibility data cleansing, so it is only partially accurate. Several added areas such as testing approach, Tool and Fleet Maintenance customization, and expense workflow approval are unsupported by the expected output.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="legend">
+        <span class="swatch" style="background:#b91c1c;"></span> Very poor score (0.00)
+        <span class="swatch" style="background:#fee2e2;"></span> Below-threshold score (0.01 to 0.49)
+        <span class="swatch" style="background:#dcfce7;"></span> Passing score (0.50+)
+      </div>
+      <div class="metric-key">
+        <h2>Metric Key</h2>
+        <table>
+          <thead><tr><th>Metric</th><th>What it Tests</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Relevance</strong></td><td>Measures whether the actual output directly addresses the user's question and stays focused on the requested topic.</td></tr>
+            <tr><td><strong>Precision</strong></td><td>Measures how closely the actual output matches the specific facts, constraints, and requested details contained in the expected output.</td></tr>
+            <tr><td><strong>Faithfulness</strong></td><td>Measures whether the actual output avoids adding unsupported claims, invented facts, or details not grounded in the expected output.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="testcase-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="pill">Test Case Details</div>
+          <h2 id="modal-title">Test Case</h2>
+          <p id="modal-subtitle" class="sub"></p>
+        </div>
+        <button type="button" class="close-button" id="close-modal" aria-label="Close popup">&times;</button>
+      </div>
+      <div class="modal-content">
+        <div class="detail-grid">
+          <div class="detail-card">
+            <div class="detail-label">Test Subject</div>
+            <div id="modal-subject" class="detail-value"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Brief Reasoning</div>
+            <div id="modal-reasoning" class="detail-value"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Relevance Score</div>
+            <div id="modal-relevance" class="detail-score"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Precision Score</div>
+            <div id="modal-precision" class="detail-score"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Faithfulness Score</div>
+            <div id="modal-faithfulness" class="detail-score"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Tools Called</div>
+            <div id="modal-tools" class="detail-value"></div>
+          </div>
+        </div>
+        <div class="detail-block"><div class="detail-label">Input</div><pre id="modal-input"></pre></div>
+        <div class="detail-block"><div class="detail-label">Expected Output</div><pre id="modal-expected"></pre></div>
+        <div class="detail-block"><div class="detail-label">Actual Output</div><pre id="modal-actual"></pre></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('testcase-modal');
+    const closeButton = document.getElementById('close-modal');
+    const fields = {
+      title: document.getElementById('modal-title'),
+      subtitle: document.getElementById('modal-subtitle'),
+      subject: document.getElementById('modal-subject'),
+      relevance: document.getElementById('modal-relevance'),
+      precision: document.getElementById('modal-precision'),
+      faithfulness: document.getElementById('modal-faithfulness'),
+      reasoning: document.getElementById('modal-reasoning'),
+      tools: document.getElementById('modal-tools'),
+      input: document.getElementById('modal-input'),
+      expected: document.getElementById('modal-expected'),
+      actual: document.getElementById('modal-actual')
+    };
+    const setText = (node, value) => { node.textContent = value ?? 'N/A'; };
+    const openModal = (payload) => {
+      fields.title.textContent = `Test Case ${payload.id}`;
+      fields.subtitle.textContent = `Details pulled from evaluation_results.csv and test_cases.csv`;
+      setText(fields.subject, payload.test_subject);
+      setText(fields.relevance, Number(payload.relevance_score).toFixed(2));
+      setText(fields.precision, Number(payload.precision_score).toFixed(2));
+      setText(fields.faithfulness, Number(payload.faithfulness_score).toFixed(2));
+      setText(fields.reasoning, payload.reasoning);
+      setText(fields.tools, payload.tools_called || 'N/A');
+      setText(fields.input, payload.input);
+      setText(fields.expected, payload.expected_output);
+      setText(fields.actual, payload.actual_output);
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeModal = () => {
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+    document.querySelectorAll('.id-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const payload = JSON.parse(button.dataset.case);
+        openModal(payload);
+      });
+    });
+    closeButton.addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+  </script>
+</body>
+</html>

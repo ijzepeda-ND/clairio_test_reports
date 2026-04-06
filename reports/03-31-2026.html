@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA Evaluation Report - 03/31/2026</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="hero">
+        <div class="horizontal-container">
+          <h1>QA Evaluation Report - </h1>
+          <h1>03/31/2026</h1>
+        </div>
+        <p class="sub">Strict evaluation of chatbot responses across relevance, precision, and faithfulness. Click any ID to open the full testcase details for that row.</p>
+        <p class="sub" style="margin-top:8px;">Analyzed and reported using OpenAI Codex (model: gpt-5).</p>
+      </div>
+      <div class="summary">
+        <div class="metric"><div class="label">Average Relevance</div><div class="value">0.52</div></div>
+        <div class="metric"><div class="label">Average Precision</div><div class="value">0.17</div></div>
+        <div class="metric"><div class="label">Average Faithfulness</div><div class="value">0.44</div></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Relevance</th><th>Precision</th><th>Faithfulness</th><th>Brief Reasoning</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;1&quot;, &quot;test_subject&quot;: &quot;Project/Workstream Pain Points&quot;, &quot;relevance_score&quot;: 0.3, &quot;precision_score&quot;: 0.0, &quot;faithfulness_score&quot;: 0.9, &quot;reasoning&quot;: &quot;The reply stays on the WMS topic but fails to provide any of the documented pain points while mostly avoiding unsupported factual additions.&quot;, &quot;input&quot;: &quot;Based on the transcripts, what are the main project pain points regarding the WMS implementation for That&#x27;s It?&quot;, &quot;expected_output&quot;: &quot;According to the meeting transcripts, Espy De Vega identified severe pain points regarding the Warehouse Management System (WMS) implementation at That&#x27;s It:\r\n*   Non-utilization by staff: Espy discovered that warehouse staff \&quot;are not using it. They only use it for cycle counts,\&quot; completely abandoning it for wave picking, transfers, and fulfillments.\r\n*   Cost and Time investment: She noted they \&quot;spend so much money in WMS\&quot; and it took \&quot;about a year to finish this WMS.\&quot;\r\n*   Inventory Discrepancies: The lack of WMS usage for daily movements is the root cause of massive inventory errors. Espy stated, \&quot;I am so tired of having variances, differences of worth, like, two millions.\&quot;\r\n*   Unauthorized changes: The warehouse stopped using the WMS for core functions after a few months without notifying management.&quot;, &quot;actual_output&quot;: &quot;I couldn&#x27;t find any specific project pain points regarding the WMS implementation for \&quot;That&#x27;s It\&quot; in the available transcripts. I searched for \&quot;WMS implementation pain points\&quot; and \&quot;WMS challenges OR WMS issues\&quot; but found no relevant results.&quot;, &quot;tools_called&quot;: &quot;[&#x27;get_pain_points_and_challenges&#x27;, &#x27;search_transcripts&#x27;]&quot;}">1</button></td>
+              <td class="score bad">0.30</td>
+              <td class="score very-bad">0.00</td>
+              <td class="score good">0.90</td>
+              <td>The reply stays on the WMS topic but fails to provide any of the documented pain points while mostly avoiding unsupported factual additions.</td>
+            </tr>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;2&quot;, &quot;test_subject&quot;: &quot;Current Status Summary (Exec-ready)&quot;, &quot;relevance_score&quot;: 0.35, &quot;precision_score&quot;: 0.05, &quot;faithfulness_score&quot;: 0.1, &quot;reasoning&quot;: &quot;The response is about the requested Target BOL status but misses the expected rollout details and adds unsupported searches, dates, and a specific fix not grounded in the target answer.&quot;, &quot;input&quot;: &quot;Provide an exec-ready summary of the current status of the Target BOL automation for That&#x27;s It.&quot;, &quot;expected_output&quot;: &quot;Based on the \&quot;THAT&#x27;S IT_Target BOL Mgt_v4_Jan28.docx\&quot; and related meeting transcripts, the current status of the Target Bill of Lading (BOL) automation is as follows:\r\n*   Project Scope: The solution involves NetSuite scripting to automate and simplify the generation of grouped Item Fulfillments for Target customers.\r\n*   Operational Readiness: In a transcribed meeting, Espy De Vega confirmed that out of the four BOLs created, three are already \&quot;functioning, being used very well by all the logistics personnel,\&quot; marking the rollout as a success.\r\n*   Next Steps for Target: The Master BOLs with supplemental lists specifically for Target are finalized and waiting to be deployed once the new \&quot;Allen warehouse is up and running.\&quot;&quot;, &quot;actual_output&quot;: &quot;I have searched for information regarding the \&quot;Target BOL automation for That&#x27;s It\&quot; across all available communication channels, including emails, meeting transcripts, and ClickUp tasks.\n\nHere is an executive-ready summary of the current status:\n\n**Target BOL Automation for That&#x27;s It: Current Status (as of March 31, 2026)**\n\n*   **Limited Direct Information**: Direct searches for a project explicitly named \&quot;Target BOL automation\&quot; for \&quot;That&#x27;s It\&quot; in emails, meeting transcripts, and ClickUp tasks did not yield specific project-level results.\n*   **Recent BOL-Related Fix Identified**: The only relevant activity found is an email from **Janelle Espino on January 9, 2026**, indicating a successful fix for the \&quot;Ship From Address\&quot; on the \&quot;Item Fulfillment printout\&quot; related to \&quot;BOL Via NS\&quot; for \&quot;That&#x27;s It\&quot;. This suggests a component of BOL functionality has been addressed.\n*   **Overall Project Status Unclear**: Beyond this specific fix, there is no further information available in the system regarding the broader status, progress, timelines, or outstanding items for a comprehensive \&quot;Target BOL automation\&quot; initiative. It is unclear if the identified fix is part of a larger ongoing automation project or a standalone item.\n\n**Recommendation:** To obtain a more detailed executive summary, further information is needed regarding the official project name for \&quot;Target BOL automation\&quot; or specific individuals involved in this initiative for \&quot;That&#x27;s It\&quot;.&quot;, &quot;tools_called&quot;: &quot;[&#x27;search_content&#x27;, &#x27;search_transcripts&#x27;, &#x27;search_clickup_tasks&#x27;, &#x27;get_client_interaction_timeline&#x27;]&quot;}">2</button></td>
+              <td class="score bad">0.35</td>
+              <td class="score bad">0.05</td>
+              <td class="score bad">0.10</td>
+              <td>The response is about the requested Target BOL status but misses the expected rollout details and adds unsupported searches, dates, and a specific fix not grounded in the target answer.</td>
+            </tr>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;3&quot;, &quot;test_subject&quot;: &quot;Commitment Tracker (Single Source of Truth)&quot;, &quot;relevance_score&quot;: 0.85, &quot;precision_score&quot;: 0.6, &quot;faithfulness_score&quot;: 1.0, &quot;reasoning&quot;: &quot;The answer correctly identifies the delivered documents, but it omits the earlier commitment and the surrounding delivery details that the expected output includes.&quot;, &quot;input&quot;: &quot;In the November 10, 2025 email thread, what specific documents did Omair Javaid commit to delivering to Espy at That&#x27;s It regarding inventory controls?&quot;, &quot;expected_output&quot;: &quot;In an email exchange beginning November 5, 2025, and concluding on November 10, 2025, Omair Javaid made the following commitments and deliveries to Espy De Vega at That&#x27;s It:\r\n*   Initial Commitment (Nov 5): Omair committed to creating an \&quot;actionable SOP for the inventory control specialist with specific Netsuite reports he/she can use.\&quot;\r\n*   Delivery (Nov 10): Omair delivered the committed documents, stating, \&quot;Please see the attached documents. There is one summary and one detailed (full) document\&quot; covering the Inventory Control Procedures. He noted he worked urgently over the weekend to finalize them.&quot;, &quot;actual_output&quot;: &quot;In the November 10, 2025 email thread, Omair Javaid committed to delivering the following documents to Espy at That&#x27;s It regarding inventory controls:\n\n*   **One summary document**\n*   **One detailed (full) document**&quot;, &quot;tools_called&quot;: &quot;[&#x27;search_content&#x27;]&quot;}">3</button></td>
+              <td class="score good">0.85</td>
+              <td class="score good">0.60</td>
+              <td class="score good">1.00</td>
+              <td>The answer correctly identifies the delivered documents, but it omits the earlier commitment and the surrounding delivery details that the expected output includes.</td>
+            </tr>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;4&quot;, &quot;test_subject&quot;: &quot;Contradiction Finder&quot;, &quot;relevance_score&quot;: 0.4, &quot;precision_score&quot;: 0.05, &quot;faithfulness_score&quot;: 0.0, &quot;reasoning&quot;: &quot;The response addresses possible contradictions but replaces the expected Google Sheet versus email/Excel conflict with different unsupported audit-SOP details.&quot;, &quot;input&quot;: &quot;Find any contradictions between Espy&#x27;s stated preferences for receiving audit checklists for That&#x27;s It and how the NDI team initially provided them.&quot;, &quot;expected_output&quot;: &quot;There is a direct contradiction regarding document sharing preferences found in the November 12, 2024 email thread:\r\n*   NDI&#x27;s Method: On November 12, 2024, Marie Pamunag sent an action item checklist using a Google Sheet link, justifying it by stating, \&quot;We prefer to use Google Sheet as there will be expected changes to this list.\&quot;\r\n*   Espy&#x27;s Stated Preference: In her replies on the same day, Espy De Vega explicitly contradicted this method, stating: \&quot;Please know that all auditors will not send me any ACTION ITEMS and CHEK LIST via google sheet instead will email or send the excel sheet.\&quot; She forcefully reiterated, \&quot;As mentioned, that is not my preference... Internally you can use it and that is not what I prefer.\&quot;&quot;, &quot;actual_output&quot;: &quot;Here are the contradictions between Espy&#x27;s stated preferences for receiving audit checklists for That&#x27;s It and how the NDI team initially provided them:\n\n**Espy&#x27;s Stated Preferences:**\n\n*   **Specific, Step-by-Step SOP:** On November 5, 2025, Espy explicitly requested a \&quot;uniform SOP to be followed step by step by INVENTORY CONTROL SPECIALIST assigned in all three locations\&quot; for the internal controls audit with inventory.\n*   **Screenshots of NetSuite Reports:** In the same email, Espy asked for \&quot;the screen shot of the report in NS that can help him monitor all the transactions.\&quot;\n*   **Confidentiality of Rates (Later Stated):** In a meeting on January 8, 2026, Espy stated that reports shared with staff should not show confidential information like rates, and a separate report without rates should be created for reconciliation.\n\n**NDI Team&#x27;s Initial Provision:**\n\n*   **General Document:** On November 10, 2025, Omair Javaid provided \&quot;one summary and one detailed (full) document.\&quot; He noted, \&quot;I currently do not know what the actual inventory processes used by That&#x27;s It are so I wanted the document to encompass as much as possible.\&quot; This indicates a more general approach rather than a tailored, step-by-step SOP for That&#x27;s It&#x27;s specific operations.\n*   **Unclear on Screenshots:** Omair&#x27;s email did not explicitly state that the provided documents included screenshots of NetSuite reports as requested by Espy.\n\n**Contradictions:**\n\n1.  **Specificity of SOP:** Espy requested a highly specific, step-by-step SOP tailored to That&#x27;s It&#x27;s three locations. The NDI team&#x27;s initial provision was a more general document, as Omair indicated he did not know That&#x27;s It&#x27;s actual processes and aimed for a document that \&quot;encompass[ed] as much as possible.\&quot; This suggests the initial delivery likely lacked the detailed, customized, step-by-step guidance Espy desired.\n2.  **Inclusion of NetSuite Screenshots:** While Omair provided \&quot;detailed\&quot; documents, there is no explicit mention that these included the requested screenshots of NetSuite reports for monitoring transactions.\n\nThe preference regarding the confidentiality of rates was expressed by Espy in January 2026, which was after Omair&#x27;s initial provision in November 2025. Therefore, while a critical preference, it does not represent a contradiction in the *initial* delivery.&quot;, &quot;tools_called&quot;: &quot;[&#x27;search_content&#x27;, &#x27;search_transcripts&#x27;]&quot;}">4</button></td>
+              <td class="score bad">0.40</td>
+              <td class="score bad">0.05</td>
+              <td class="score very-bad">0.00</td>
+              <td>The response addresses possible contradictions but replaces the expected Google Sheet versus email/Excel conflict with different unsupported audit-SOP details.</td>
+            </tr>
+            <tr>
+              <td><button type="button" class="id-button" data-case="{&quot;id&quot;: &quot;5&quot;, &quot;test_subject&quot;: &quot;Scope Creep Detector&quot;, &quot;relevance_score&quot;: 0.7, &quot;precision_score&quot;: 0.15, &quot;faithfulness_score&quot;: 0.2, &quot;reasoning&quot;: &quot;The response stays on the scope-creep question, but it misses the explicit evidence in the expected output and introduces weaker unsupported indicators instead.&quot;, &quot;input&quot;: &quot;Is there any evidence of scope creep regarding the automated AI work log project for That&#x27;s It?&quot;, &quot;expected_output&quot;: &quot;Yes, there is evidence of scope creep initiated by Espy and the That&#x27;s It team regarding the AI work log project:\r\n*   In an August 2025 meeting transcript, Aysha and Scott Lee discussed the project&#x27;s expanding parameters, with Scott stating, \&quot;we keep getting a new requirement each week.\&quot;\r\n*   In another transcribed meeting, Janelle and Omair noted Espy wanted to add a feature to allow users to edit the worklog employee and employee rate during syncing. Gregorio explicitly flagged this as scope creep, stating, \&quot;that&#x27;s a new scope, and we&#x27;re trying to close this scope... We don&#x27;t want to start adding more stuff.\&quot;&quot;, &quot;actual_output&quot;: &quot;Based on the available data:\n\n*   **Meeting Transcripts:** No direct evidence of \&quot;scope creep,\&quot; \&quot;additional features,\&quot; \&quot;new requirements,\&quot; \&quot;project expansion,\&quot; or \&quot;change in scope\&quot; was found in the meeting transcripts for the automated AI work log project for That&#x27;s It.\n\n*   **Emails:**\n    *   An email from Aysha Arif on March 17, 2026, states a requirement for \&quot;42 hours to complete the BOL template modifications and the worklogs project to be taken Live.\&quot; While this indicates a need for additional hours, it does not explicitly confirm that new features or requirements caused this, or if it was an initial underestimation.\n    *   A ClickUp notification email from February 17, 2026, mentions \&quot;Mobile App changes\&quot; for the \&quot;TIN | Work Logs App.\&quot; This suggests ongoing modifications to the application, which could potentially indicate an evolving scope for the project.\n\n**Conclusion:**\n\nWhile there is no explicit mention of \&quot;scope creep\&quot; in the available data, the \&quot;Mobile App changes\&quot; and the request for additional hours for the \&quot;worklogs project to be taken Live\&quot; could be indirect indicators of an evolving project scope for the automated AI work log project for That&#x27;s It. Further investigation into the specifics of these changes would be needed to confirm actual scope creep.&quot;, &quot;tools_called&quot;: &quot;[&#x27;search_transcripts&#x27;, &#x27;search_content&#x27;]&quot;}">5</button></td>
+              <td class="score good">0.70</td>
+              <td class="score bad">0.15</td>
+              <td class="score bad">0.20</td>
+              <td>The response stays on the scope-creep question, but it misses the explicit evidence in the expected output and introduces weaker unsupported indicators instead.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="legend">
+        <span class="swatch" style="background:#b91c1c;"></span> Very poor score (0.00)
+        <span class="swatch" style="background:#fee2e2;"></span> Below-threshold score (0.01 to 0.49)
+        <span class="swatch" style="background:#dcfce7;"></span> Passing score (0.50+)
+      </div>
+      <div class="metric-key">
+        <h2>Metric Key</h2>
+        <table>
+          <thead><tr><th>Metric</th><th>What it Tests</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Relevance</strong></td><td>Measures whether the actual output directly addresses the user's question and stays focused on the requested topic.</td></tr>
+            <tr><td><strong>Precision</strong></td><td>Measures how closely the actual output matches the specific facts, constraints, and requested details contained in the expected output.</td></tr>
+            <tr><td><strong>Faithfulness</strong></td><td>Measures whether the actual output avoids adding unsupported claims, invented facts, or details not grounded in the expected output.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="testcase-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="pill">Test Case Details</div>
+          <h2 id="modal-title">Test Case</h2>
+          <p id="modal-subtitle" class="sub"></p>
+        </div>
+        <button type="button" class="close-button" id="close-modal" aria-label="Close popup">&times;</button>
+      </div>
+      <div class="modal-content">
+        <div class="detail-grid">
+          <div class="detail-card">
+            <div class="detail-label">Test Subject</div>
+            <div id="modal-subject" class="detail-value"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Brief Reasoning</div>
+            <div id="modal-reasoning" class="detail-value"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Relevance Score</div>
+            <div id="modal-relevance" class="detail-score"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Precision Score</div>
+            <div id="modal-precision" class="detail-score"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Faithfulness Score</div>
+            <div id="modal-faithfulness" class="detail-score"></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-label">Tools Called</div>
+            <div id="modal-tools" class="detail-value"></div>
+          </div>
+        </div>
+        <div class="detail-block"><div class="detail-label">Input</div><pre id="modal-input"></pre></div>
+        <div class="detail-block"><div class="detail-label">Expected Output</div><pre id="modal-expected"></pre></div>
+        <div class="detail-block"><div class="detail-label">Actual Output</div><pre id="modal-actual"></pre></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('testcase-modal');
+    const closeButton = document.getElementById('close-modal');
+    const fields = {
+      title: document.getElementById('modal-title'),
+      subtitle: document.getElementById('modal-subtitle'),
+      subject: document.getElementById('modal-subject'),
+      relevance: document.getElementById('modal-relevance'),
+      precision: document.getElementById('modal-precision'),
+      faithfulness: document.getElementById('modal-faithfulness'),
+      reasoning: document.getElementById('modal-reasoning'),
+      tools: document.getElementById('modal-tools'),
+      input: document.getElementById('modal-input'),
+      expected: document.getElementById('modal-expected'),
+      actual: document.getElementById('modal-actual')
+    };
+    const setText = (node, value) => { node.textContent = value ?? 'N/A'; };
+    const openModal = (payload) => {
+      fields.title.textContent = `Test Case ${payload.id}`;
+      fields.subtitle.textContent = `Details pulled from evaluation_results.csv and test_cases.csv`;
+      setText(fields.subject, payload.test_subject);
+      setText(fields.relevance, Number(payload.relevance_score).toFixed(2));
+      setText(fields.precision, Number(payload.precision_score).toFixed(2));
+      setText(fields.faithfulness, Number(payload.faithfulness_score).toFixed(2));
+      setText(fields.reasoning, payload.reasoning);
+      setText(fields.tools, payload.tools_called || 'N/A');
+      setText(fields.input, payload.input);
+      setText(fields.expected, payload.expected_output);
+      setText(fields.actual, payload.actual_output);
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeModal = () => {
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+    document.querySelectorAll('.id-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const payload = JSON.parse(button.dataset.case);
+        openModal(payload);
+      });
+    });
+    closeButton.addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+  </script>
+</body>
+</html>
