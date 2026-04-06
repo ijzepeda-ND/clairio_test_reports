@@ -6,7 +6,6 @@
   <title>Clairio QA Reports Portal</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <script>
@@ -15,17 +14,9 @@
       theme: {
         extend: {
           colors: {
-            mustard: {
-              DEFAULT: '#E4A853',
-              dark: '#D19742',
-            },
+            mustard: { DEFAULT: '#E4A853', dark: '#D19742' },
             'off-white': '#F9F9F8',
-            charcoal: '#1A1A1A',
-            'gray-dark': '#3D3C3B',
-            'gray-med': '#CAC8C4',
-            'dark-bg': '#121212',
-            'dark-text': '#F3F4F6',
-            'dark-text-secondary': '#9CA3AF'
+            charcoal: '#1A1A1A'
           }
         }
       }
@@ -37,106 +28,50 @@
 
   <style>
     body {
-      background-color: #F9F9F8; /* off-white */
-      color: #1A1A1A; /* charcoal */
-      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #F9F9F8;
+      color: #1A1A1A;
+      font-family: sans-serif;
     }
-    
-    /* Subtle mustard glow for cards on hover */
-    .report-card:hover {
-      box-shadow: 0 4px 14px 0 rgba(228, 168, 83, 0.2);
-      border-color: #E4A853;
+    /* Añadí esto como "Seguro de vida": Si Tailwind falla, al menos verás esto centrado */
+    #login-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-
-    /* Loader styling */
-    .loader {
-      border: 3px solid #f3f3f3;
-      border-top: 3px solid #E4A853;
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </script>
+  </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
 
-  <div id="login-container" class="flex-1 flex flex-col items-center justify-center p-4">
-    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 max-w-md w-full text-center">
-      <div class="w-16 h-16 bg-mustard/20 rounded-full flex items-center justify-center mx-auto mb-6">
-        <i class="fa-solid fa-robot text-3xl text-mustard-dark"></i>
-      </div>
-      <h1 class="text-2xl font-bold text-charcoal mb-2">Clairio QA Portal</h1>
-      <p class="text-gray-500 mb-8">Strict evaluation reporting dashboard. Authorized access only.</p>
+  <div id="login-container" style="padding: 2rem;">
+    <div style="background: white; padding: 2rem; border-radius: 10px; border: 2px solid #E4A853; text-align: center; max-width: 400px; width: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <h1 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">Clairio QA Portal</h1>
+      <p style="color: gray; margin-bottom: 1.5rem;">Authorized access only.</p>
       
-      <button id="login-btn" class="w-full bg-mustard hover:bg-mustard-dark text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-3">
-        <i class="fa-brands fa-google"></i>
-        Sign in with Google
+      <button id="login-btn" style="background-color: #E4A853; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 1rem; width: 100%; font-weight: bold;">
+        <i class="fa-brands fa-google"></i> Sign in with Google
       </button>
-      <div id="login-error" class="hidden mt-4 text-sm text-red-600 bg-red-50 p-3 rounded border border-red-200"></div>
+      <div id="login-error" style="display: none; color: red; margin-top: 1rem; font-size: 0.875rem;"></div>
     </div>
   </div>
 
-  <div id="dashboard-container" class="hidden flex-1 flex flex-col">
-    
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-mustard/20 rounded flex items-center justify-center">
-            <i class="fa-solid fa-chart-line text-mustard-dark"></i>
-          </div>
-          <h1 class="text-xl font-bold text-charcoal tracking-tight">QA Reports</h1>
-        </div>
-        <div class="flex items-center gap-4">
-          <span id="user-email" class="text-sm text-gray-500 font-medium"></span>
-          <button id="logout-btn" class="text-sm text-gray-500 hover:text-charcoal transition-colors px-3 py-1.5 rounded-md hover:bg-gray-100 border border-transparent">
-            Sign Out
-          </button>
-        </div>
+  <div id="dashboard-container" style="display: none; padding: 2rem; max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 1rem;">
+      <h1 style="font-size: 1.5rem; font-weight: bold;">QA Reports History</h1>
+      <div>
+        <span id="user-email" style="margin-right: 1rem; color: gray;"></span>
+        <button id="logout-btn" style="background: none; border: 1px solid gray; padding: 5px 10px; cursor: pointer; border-radius: 4px;">Sign Out</button>
       </div>
-    </header>
+    </div>
 
-    <main class="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
-      
-      <div class="mb-8">
-        <h2 class="text-2xl font-semibold text-charcoal">Evaluation History</h2>
-        <p class="text-gray-500 mt-1">Select a date to view the detailed HTML evaluation report.</p>
-      </div>
-
-      <div id="loading-state" class="flex flex-col items-center justify-center py-12 hidden">
-        <div class="loader mb-4"></div>
-        <p class="text-gray-500 text-sm">Fetching reports from repository...</p>
-      </div>
-
-      <div id="error-state" class="hidden bg-red-500/10 border border-red-200 text-red-700 p-4 rounded-lg flex items-start gap-3 mb-6">
-        <i class="fa-solid fa-circle-exclamation mt-1"></i>
-        <div>
-          <h3 class="font-semibold">Failed to load reports</h3>
-          <p id="error-message" class="text-sm mt-1"></p>
-        </div>
-      </div>
-
-      <div id="reports-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        </div>
-      
-      <div id="empty-state" class="hidden flex flex-col items-center justify-center py-16 bg-white border border-gray-200 rounded-xl border-dashed">
-        <i class="fa-regular fa-folder-open text-4xl text-gray-300 mb-3"></i>
-        <h3 class="text-gray-dark font-medium">No reports found</h3>
-        <p class="text-gray-500 text-sm mt-1">Evaluation HTML files placed in the /reports folder will appear here.</p>
-      </div>
-
-    </main>
+    <div id="error-message" style="color: red; margin-bottom: 1rem;"></div>
+    <div id="reports-grid" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));"></div>
+    <div id="empty-state" style="display: none; text-align: center; padding: 3rem; color: gray;">No reports found in the /reports folder.</div>
   </div>
 
   <script>
-    // ==========================================
-    // TODO: 1. FIREBASE CONFIGURATION 
-    // DONE!
-    // ==========================================
+    // 1. FIREBASE CONFIGURATION (Tus llaves exactas)
     const firebaseConfig = {
       apiKey: "AIzaSyCslB_CnVHyRI0Fbqny-my_GPQp7ARWeJI",
       authDomain: "ndi-firebase.firebaseapp.com",
@@ -147,58 +82,44 @@
       measurementId: "G-EZQV6FX4L6"
     };
 
-    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     const provider = new firebase.auth.GoogleAuthProvider();
-    
-    // Optional: Restrict to your company domain
-    // provider.setCustomParameters({ hd: 'yourcompany.com' });
 
-    // ==========================================
-    // TODO: 2. GITHUB CONFIGURATION
-    // Replace with your GitHub username and the Repo Name
-    // ==========================================
+    // 2. GITHUB CONFIGURATION (Tu repo exacto)
     const GITHUB_USER = "ijzepeda-ND";
-    const GITHUB_REPO = "clairio_test_reports"; // The repo where this page lives
-    const FOLDER_PATH = "reports"; // Folder containing the HTMLs
+    const GITHUB_REPO = "clairio_test_reports";
+    const FOLDER_PATH = "reports";
 
-    // DOM Elements
     const loginContainer = document.getElementById('login-container');
     const dashboardContainer = document.getElementById('dashboard-container');
     const loginBtn = document.getElementById('login-btn');
     const logoutBtn = document.getElementById('logout-btn');
     const userEmailSpan = document.getElementById('user-email');
     const loginError = document.getElementById('login-error');
-    
-    const loadingState = document.getElementById('loading-state');
     const reportsGrid = document.getElementById('reports-grid');
     const emptyState = document.getElementById('empty-state');
-    const errorState = document.getElementById('error-state');
     const errorMessage = document.getElementById('error-message');
 
-    // --- Authentication Logic ---
-    
+    // Manejo de sesión
     auth.onAuthStateChanged(user => {
       if (user) {
-        // User is logged in
-        loginContainer.classList.add('hidden');
-        dashboardContainer.classList.remove('hidden');
+        loginContainer.style.display = 'none';
+        dashboardContainer.style.display = 'block';
         userEmailSpan.textContent = user.email;
-        fetchReports(); // Load data only after login
+        fetchReports();
       } else {
-        // User is logged out
-        loginContainer.classList.remove('hidden');
-        dashboardContainer.classList.add('hidden');
-        reportsGrid.innerHTML = ''; // Clear sensitive data
+        loginContainer.style.display = 'flex';
+        dashboardContainer.style.display = 'none';
+        reportsGrid.innerHTML = '';
       }
     });
 
     loginBtn.addEventListener('click', () => {
-      loginError.classList.add('hidden');
+      loginError.style.display = 'none';
       auth.signInWithPopup(provider).catch(error => {
         loginError.textContent = error.message;
-        loginError.classList.remove('hidden');
+        loginError.style.display = 'block';
       });
     });
 
@@ -206,78 +127,45 @@
       auth.signOut();
     });
 
-    // --- GitHub API Logic ---
-
+    // Petición a GitHub
     async function fetchReports() {
-      loadingState.classList.remove('hidden');
-      reportsGrid.innerHTML = '';
-      emptyState.classList.add('hidden');
-      errorState.classList.add('hidden');
+      reportsGrid.innerHTML = 'Loading reports...';
+      emptyState.style.display = 'none';
+      errorMessage.textContent = '';
 
       const apiUrl = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${FOLDER_PATH}`;
 
       try {
         const response = await fetch(apiUrl);
-        
         if (response.status === 404) {
-          loadingState.classList.add('hidden');
-          emptyState.classList.remove('hidden');
+          reportsGrid.innerHTML = '';
+          emptyState.style.display = 'block';
           return;
         }
-
-        if (!response.ok) throw new Error(`GitHub API Error: ${response.statusText}`);
+        if (!response.ok) throw new Error(`GitHub Error: ${response.statusText}`);
         
         const files = await response.json();
-        
-        // Filter only HTML files and sort by newest first (assuming YYYY-MM-DD format in names helps)
-        const htmlFiles = files
-          .filter(file => file.name.endsWith('.html'))
-          .sort((a, b) => b.name.localeCompare(a.name));
+        const htmlFiles = files.filter(file => file.name.endsWith('.html')).sort((a, b) => b.name.localeCompare(a.name));
 
-        loadingState.classList.add('hidden');
-
+        reportsGrid.innerHTML = '';
         if (htmlFiles.length === 0) {
-          emptyState.classList.remove('hidden');
+          emptyState.style.display = 'block';
           return;
         }
 
-        renderReports(htmlFiles);
-
+        htmlFiles.forEach(file => {
+          const reportUrl = `${FOLDER_PATH}/${file.name}`;
+          const card = document.createElement('a');
+          card.href = reportUrl;
+          card.target = "_blank";
+          card.style.cssText = "display: block; padding: 1.5rem; background: white; border: 1px solid #ccc; border-radius: 8px; text-decoration: none; color: black; box-shadow: 0 2px 4px rgba(0,0,0,0.05);";
+          card.innerHTML = `<h3 style="margin:0; color:#E4A853;">${file.name.replace('.html', '')}</h3><p style="margin:0; font-size:12px; color:gray; margin-top:5px;">Open Report ↗</p>`;
+          reportsGrid.appendChild(card);
+        });
       } catch (error) {
-        loadingState.classList.add('hidden');
-        errorState.classList.remove('hidden');
+        reportsGrid.innerHTML = '';
         errorMessage.textContent = error.message;
       }
-    }
-
-    function renderReports(files) {
-      files.forEach(file => {
-        // Clean up the name for display (e.g., "04-02-2026.html" -> "04-02-2026")
-        const displayName = file.name.replace('.html', '');
-        
-        // Construct the relative path to open the report
-        const reportUrl = `${FOLDER_PATH}/${file.name}`;
-
-        const card = document.createElement('a');
-        card.href = reportUrl;
-        card.target = "_blank"; // Open in new tab
-        card.className = "report-card bg-white border border-gray-200 rounded-xl p-5 flex items-center justify-between transition-all group block";
-        
-        card.innerHTML = `
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 rounded-lg bg-mustard/10 flex items-center justify-center text-mustard-dark group-hover:bg-mustard group-hover:text-white transition-colors">
-              <i class="fa-regular fa-file-code"></i>
-            </div>
-            <div>
-              <h3 class="font-semibold text-charcoal">${displayName}</h3>
-              <p class="text-xs text-gray-500 mt-0.5">QA Evaluation Run</p>
-            </div>
-          </div>
-          <i class="fa-solid fa-chevron-right text-gray-300 group-hover:text-mustard transition-colors"></i>
-        `;
-        
-        reportsGrid.appendChild(card);
-      });
     }
   </script>
 </body>
