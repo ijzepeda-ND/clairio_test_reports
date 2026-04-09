@@ -36,6 +36,7 @@ td.score { font-weight: 700; text-align: center; width: 110px; }
 .bad { background: var(--red-soft); color: var(--red-text); }
 .very-bad { background: var(--red-strong); color: #fff; }
 .good { background: var(--green-soft); color: var(--green-text); }
+.very-good { background: var(--green-text); color: var(--green-soft); }
 .legend { padding: 0 28px 28px; color: var(--muted); font-size: 14px; }
 .metric-key { margin: 0 28px 28px; padding: 20px; border: 1px solid var(--border); border-radius: 14px; background: #f8fafc; }
 .metric-key h2 { margin: 0 0 12px; font-size: 20px; }
